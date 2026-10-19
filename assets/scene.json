@@ -1,0 +1,39 @@
+{
+  "model": "assets/cofre.spz",
+  "fov": 38,
+  "camera": {
+    "position": [
+      1.1717,
+      1.276,
+      1.8751
+    ],
+    "target": [
+      0.0,
+      0.48,
+      0.0
+    ]
+  },
+  "bounds": {
+    "min": [
+      -0.372,
+      -0.003,
+      -0.205
+    ],
+    "max": [
+      0.339,
+      1.002,
+      0.25
+    ]
+  },
+  "fitMargin": 0.97,
+  "minDistance": 0.25,
+  "maxDistance": 6.0,
+  "azimuthLimitDeg": [
+    -110,
+    72
+  ],
+  "polarLimitDeg": [
+    0,
+    96
+  ]
+}

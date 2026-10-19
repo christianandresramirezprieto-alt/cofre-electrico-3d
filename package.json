@@ -1,0 +1,15 @@
+{
+  "name": "cofre-electrico-visor-3d",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Visor web interactivo del cofre eléctrico reconstruido (Gaussian Splatting + Three.js/Spark)",
+  "type": "module",
+  "scripts": {
+    "vendor": "node scripts/copy-vendor.mjs",
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "@sparkjsdev/spark": "2.3.1",
+    "three": "0.186.1"
+  }
+}
