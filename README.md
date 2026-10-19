@@ -14,6 +14,7 @@ web/
 ├── index.html            página
 ├── app.js                visor: carga, controles de cámara, restablecer vista
 ├── style.css             estilos (fondo neutro, modo claro/oscuro, móvil)
+├── og.jpg                imagen de vista previa al compartir el enlace (1200 × 630)
 ├── assets/
 │   ├── cofre.spz         modelo 3D (Gaussian Splats comprimidos, formato SPZ)
 │   └── scene.json        vista inicial y límites de la cámara
@@ -69,6 +70,9 @@ archivos estáticos. Hay que subir `index.html`, `app.js`, `style.css`, `assets/
   (Netlify Drop) o conectar el repositorio sin paso de compilación.
 - **Servidor propio (Nginx, Apache, IIS):** copiar la carpeta al directorio público. Conviene
   activar la compresión gzip o brotli para `.js`; el `.spz` ya está comprimido.
+
+Si publicas en otra dirección, cambia en `index.html` las URL absolutas de `og:url`, `og:image` y
+`twitter:image`: las aplicaciones de mensajería necesitan la dirección completa de la imagen.
 
 No hay que configurar cabeceras especiales. Si el sitio se publica en un subdirectorio,
 todas las rutas son relativas y siguen funcionando.
