@@ -15,17 +15,17 @@
   },
   "bounds": {
     "min": [
-      -0.351,
+      -0.428,
       0.002,
-      -0.205
+      -0.208
     ],
     "max": [
-      0.338,
-      1.002,
-      0.25
+      0.434,
+      1.0,
+      0.249
     ]
   },
-  "fitMargin": 0.97,
+  "fitMargin": 0.84,
   "minDistance": 0.25,
   "maxDistance": 6.0,
   "azimuthLimitDeg": [

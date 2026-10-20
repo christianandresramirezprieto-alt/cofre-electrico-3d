@@ -12,12 +12,13 @@ instalar nada en el equipo de quien la visita: basta un navegador moderno con We
 ```
 web/
 ├── index.html            página
-├── app.js                visor: carga, controles de cámara, restablecer vista
-├── style.css             estilos (fondo neutro, modo claro/oscuro, móvil)
+├── app.js                visor: carga, cámara, vistas, puntos de interés, giro, captura
+├── style.css             interfaz (placa de identificación, barra de vistas, fichas; claro/oscuro, móvil)
 ├── og.jpg                imagen de vista previa al compartir el enlace (1200 × 630)
 ├── assets/
 │   ├── cofre.spz         modelo 3D (Gaussian Splats comprimidos, formato SPZ)
-│   └── scene.json        vista inicial y límites de la cámara
+│   ├── scene.json        vista inicial y límites de la cámara
+│   └── hotspots.json     puntos de interés: posición, orientación, texto y vista de cada componente
 ├── vendor/               three.js y Spark copiados de npm (sin CDN)
 ├── server.mjs            servidor estático mínimo para pruebas locales (Node.js, sin dependencias)
 ├── package.json          versiones exactas de three y Spark
@@ -43,15 +44,32 @@ python -m http.server 8080
 
 Después se abre `http://localhost:8080` en el navegador.
 
-## Controles
+## Interfaz
 
-| Acción | Ratón | Pantalla táctil |
+- **Placa de identificación** (arriba a la izquierda): nombre del equipo, potencia y tensión
+  tomadas de los rótulos del cofre.
+- **Barra de vistas** (abajo): ¾, Frente, Izquierda, Derecha y Arriba, con transición suave;
+  **Puntos** muestra u oculta los puntos de interés, **Girar** activa un giro automático de
+  vaivén dentro de la zona filmada y ↺ restablece la vista.
+- **Puntos de interés** (círculos amarillos numerados): al pulsarlos, la cámara se acerca a la
+  pieza y aparece su ficha. Con *Anterior / Siguiente* (o ← →) se recorren los 10 puntos. Un
+  punto se oculta cuando la pieza queda de espaldas.
+- **Herramientas** (arriba a la derecha): información del modelo, captura de imagen (PNG),
+  pantalla completa y ocultar la interfaz para ver solo el modelo.
+
+| Acción | Ratón y teclado | Pantalla táctil |
 |---|---|---|
 | Girar | arrastrar con el botón izquierdo | un dedo |
 | Acercar / alejar | rueda | pellizcar |
 | Desplazar | arrastrar con el botón derecho | dos dedos |
 | Centrar en un punto | doble clic sobre el cofre | doble toque |
-| Restablecer la vista | botón ↺ o tecla R | botón ↺ |
+| Vistas | teclas 1 a 5 | barra inferior |
+| Recorrer puntos de interés | ← → | Anterior / Siguiente |
+| Puntos · Giro · Restablecer | P · A · R | barra inferior |
+| Información · Captura · Pantalla completa · Ocultar interfaz | I · C · F · H | botones superiores |
+
+Para añadir o corregir un punto de interés basta editar `assets/hotspots.json` (coordenadas en el
+marco del cofre: altura 1, Y arriba, frente hacia +Z).
 
 El giro horizontal está limitado a la zona que cubrió el video (de −110° a +72° respecto
 al frente): la cara trasera, pegada a la pared, y la cara inferior nunca se filmaron. Para
@@ -61,7 +79,7 @@ quitar el límite, sustituye `azimuthLimitDeg` y `polarLimitDeg` por `null` en
 ## Publicar en Internet
 
 La carpeta `web/` es un sitio estático: se puede subir tal cual a cualquier alojamiento de
-archivos estáticos. Hay que subir `index.html`, `app.js`, `style.css`, `assets/` y `vendor/`;
+archivos estáticos. Hay que subir `index.html`, `app.js`, `style.css`, `og.jpg`, `assets/` y `vendor/`;
 `node_modules/`, `server.mjs` y `scripts/` no hacen falta.
 
 - **GitHub Pages:** crear un repositorio, subir el contenido de `web/` y activar

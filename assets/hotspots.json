@@ -1,0 +1,85 @@
+{
+  "_nota": "Posiciones en el marco del cofre (altura = 1, Y arriba, frente hacia +Z), medidas sobre los splats: centroides por color (rótulos, placa, cinta) o por relieve (manija, prensaestopas, cáncamos). 'normal' indica hacia dónde mira la pieza (el punto se oculta cuando queda de espaldas). 'vista' es la cámara para ver la pieza: azimut y elevación en grados y distancia.",
+  "puntos": [
+    {
+      "id": "riesgo",
+      "titulo": "Señal de riesgo eléctrico",
+      "texto": "Triángulo de peligro por riesgo eléctrico con la leyenda «BT 480 V / 220 V» (BT: baja tensión).",
+      "pos": [0.007, 0.745, 0.236],
+      "normal": [0, 0, 1],
+      "vista": { "az": 8, "el": 6, "dist": 0.72 }
+    },
+    {
+      "id": "placa",
+      "titulo": "Placa de características",
+      "texto": "Placa metálica con los datos técnicos del transformador. Su texto es demasiado pequeño para leerse en la reconstrucción.",
+      "pos": [0.01, 0.485, 0.24],
+      "normal": [0, 0, 1],
+      "vista": { "az": 6, "el": 4, "dist": 0.55 }
+    },
+    {
+      "id": "potencia",
+      "titulo": "Potencia nominal: 50 kVA",
+      "texto": "Rotulada con plantilla en la parte baja de la puerta frontal.",
+      "pos": [0.014, 0.27, 0.228],
+      "normal": [0, 0, 1],
+      "vista": { "az": 6, "el": 6, "dist": 0.7 }
+    },
+    {
+      "id": "manija",
+      "titulo": "Manija de la puerta",
+      "texto": "Manija de apertura en el borde derecho de la puerta frontal.",
+      "pos": [0.213, 0.47, 0.256],
+      "normal": [0.25, 0, 1],
+      "vista": { "az": 22, "el": 6, "dist": 0.55 }
+    },
+    {
+      "id": "avisos",
+      "titulo": "Avisos superiores",
+      "texto": "Adhesivo rojo «PELIGRO» en la esquina izquierda y aviso «IMPORTANTE» junto a la cerradura, en la esquina derecha.",
+      "pos": [-0.212, 0.886, 0.235],
+      "normal": [0, 0, 1],
+      "vista": { "az": 4, "el": 10, "dist": 0.85 }
+    },
+    {
+      "id": "prensa-izq",
+      "titulo": "Prensaestopas izquierdo",
+      "texto": "Entrada de cables con codo y conducto flexible gris, marcado con cinta naranja, que se dirige hacia la parte trasera.",
+      "pos": [-0.339, 0.871, 0.012],
+      "normal": [-1, 0, 0],
+      "vista": { "az": -78, "el": 14, "dist": 0.85 }
+    },
+    {
+      "id": "prensa-der",
+      "titulo": "Prensaestopas derecho",
+      "texto": "Entrada de cables con codo y conducto flexible oscuro que baja en diagonal hacia la parte trasera.",
+      "pos": [0.342, 0.859, 0.009],
+      "normal": [1, 0, 0],
+      "vista": { "az": 66, "el": 14, "dist": 0.85 }
+    },
+    {
+      "id": "cancamos",
+      "titulo": "Cáncamos de izaje",
+      "texto": "Orejas metálicas en las esquinas superiores, pensadas para levantar el cofre al instalarlo.",
+      "pos": [0.312, 0.883, 0.185],
+      "normal": [0.7, 0.2, 0.7],
+      "vista": { "az": 42, "el": 18, "dist": 0.75 }
+    },
+    {
+      "id": "techo",
+      "titulo": "Techo con alero",
+      "texto": "Cubierta con pliegues a cuatro aguas que sobresale sobre la puerta y los costados.",
+      "pos": [0.0, 1.0, 0.03],
+      "normal": [0, 1, 0],
+      "vista": { "az": -15, "el": 62, "dist": 1.35 }
+    },
+    {
+      "id": "base",
+      "titulo": "Base y pestañas de anclaje",
+      "texto": "Pestañas laterales con perforaciones para fijar el cofre al piso con pernos.",
+      "pos": [0.31, 0.03, 0.17],
+      "normal": [0.6, 0.3, 0.8],
+      "vista": { "az": 38, "el": 12, "dist": 0.65 }
+    }
+  ]
+}
